@@ -1,6 +1,11 @@
 <template>
   <div class="navItem">
-    <div class="leftAlign">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="../assets/AV-logo-bg.png" alt="logo" width="80px">
+        <h2 style="color:white;" id="ngo-name">Akkum Vakkum</h2>
+      </div>
+      <div class="leftAlign">
       <ul>
         <li v-for="routes in links" :key="routes.id">
           <router-link class="spacing" :to="`${routes.page}`">{{
@@ -9,23 +14,6 @@
         </li>
       </ul>
     </div>
-    <div class="rightAlign">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-
-      <div>
-        <v-btn small rounded color="success" dark>DONATE</v-btn>
-
-        <v-btn style="margin:20px;" small rounded color="success" dark
-          >JOIN US</v-btn
-        >
-      </div>
     </div>
   </div>
 </template>
@@ -54,21 +42,23 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: rgb(40, 44, 52);
 }
 .navItem {
   display: flex;
-}
-.leftAlign {
-  width: 60%;
+  background-color: rgb(40, 44, 52);
 }
 
-.rightAlign {
+.nav-container{
+  width: 80%;
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  justify-content: space-between;
-  width: 40%;
+  justify-content: space-around;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
 }
 
 ul {
@@ -85,10 +75,11 @@ li {
   display: block;
   margin-right: 10px;
   color: white;
+  font-weight: 500;
   text-decoration: none;
   padding: 20px;
 }
-li .spacing:hover {
-  background-color: #4caf50;
+.spacing:hover {
+  color: #4caf50;
 }
 </style>

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import DisplayBlog from "./BlogComponents/BlogDisplay.vue";
+import DisplayBlog from "../components/BlogComponents/BlogDisplay";
 export default {
   name: "Blog",
   components: {
