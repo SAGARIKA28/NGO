@@ -1,15 +1,22 @@
 <template>
   <div>
-    <h1>This is Blog page</h1>
+    <DisplayBlog />
   </div>
 </template>
 
 <script>
+import DisplayBlog from "./BlogComponents/BlogDisplay.vue";
 export default {
-  name: "Blog"
+  name: "Blog",
+  components: {
+    DisplayBlog: DisplayBlog
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+* {
+  background-color: rgb(40, 44, 52);
+}
 </style>

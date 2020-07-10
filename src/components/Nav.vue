@@ -3,7 +3,9 @@
     <div class="leftAlign">
       <ul>
         <li v-for="routes in links" :key="routes.id">
-          <router-link class="spacing" :to="`${routes.page}`">{{ routes.text }}</router-link>
+          <router-link class="spacing" :to="`${routes.page}`">{{
+            routes.text
+          }}</router-link>
         </li>
       </ul>
     </div>
@@ -20,7 +22,9 @@
       <div>
         <v-btn small rounded color="success" dark>DONATE</v-btn>
 
-        <v-btn style="margin:20px;" small rounded color="success" dark>JOIN US</v-btn>
+        <v-btn style="margin:20px;" small rounded color="success" dark
+          >JOIN US</v-btn
+        >
       </div>
     </div>
   </div>
@@ -37,10 +41,10 @@ export default {
         { id: 2, text: "What We Do", page: "/WhatWeDo" },
         { id: 3, text: "Gallery", page: "/Gallery" },
         { id: 4, text: "Blog", page: "/Blog" },
-        { id: 5, text: "Contact Us", page: "/Contact" }
-      ]
+        { id: 5, text: "Contact Us", page: "/Contact" },
+      ],
     };
-  }
+  },
 };
 </script>
 
