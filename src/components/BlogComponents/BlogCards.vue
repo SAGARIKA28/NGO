@@ -67,5 +67,6 @@ export default {
 <style scoped>
 .divider {
   border: 2px solid #4caf50;
+  margin-bottom: 50px;
 }
 </style>

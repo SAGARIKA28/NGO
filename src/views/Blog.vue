@@ -1,28 +1,28 @@
 <template>
   <div>
-    <!-- <blogSlider></blogSlider>-->
+    <blogSlider></blogSlider>
     <br />
     <br />
 
-    <!-- <BlogCards></BlogCards>-->
+    <BlogCards></BlogCards>
     <!--<DisplayBlog />-->
   </div>
 </template>
 
 <script>
 //import DisplayBlog from "./BlogComponents/BlogDisplay.vue";
-//import BlogSlider from "../BlogComponents/BlogSlider.vue";
-//import BlogCards from "../BlogComponents/BlogCards.vue";
+import BlogSlider from "../components/BlogComponents/BlogSlider.vue";
+import BlogCards from "../components/BlogComponents/BlogCards.vue";
 
 //import DisplayBlog from "./components/BlogComponents/BlogDisplay";
 
 export default {
-  name: "Blog"
-  //components: {
-  // DisplayBlog: DisplayBlog,
-  // BlogSlider: BlogSlider,
-  // BlogCards: BlogCards
-  // }
+  name: "Blog",
+  components: {
+    // DisplayBlog: DisplayBlog,
+    BlogSlider: BlogSlider,
+    BlogCards: BlogCards
+  }
 };
 </script>
 
