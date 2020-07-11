@@ -11,59 +11,59 @@
     </v-carousel>
 
     <div class="container">
-      <h1 style="text-align:center;color: whitesmoke;">WHO ARE WE</h1>
-      <br />
-      <p style="text-align:center;color: whitesmoke;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-        ratione? Corporis, quibusdam quo. Facilis autem alias corporis odit
-        dolorum quo repellendus, ipsum recusandae fuga voluptatem sit blanditiis
-        sint itaque nisi. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Labore, reprehenderit? Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Maxime, ratione? Corporis, quibusdam quo. Facilis
-        autem alias corporis odit dolorum quo repellendus, ipsum recusandae fuga
-        voluptatem sit blanditiis sint itaque nisi. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Labore, reprehenderit?
-      </p>
-      <div class="button">
-        <v-btn small rounded color="success" dark>KNOW MORE</v-btn>
+      <div class="home-section">
+        <h1 style="text-align:center;color: whitesmoke;">WHO ARE WE</h1>
+        <p style="text-align:center;color: whitesmoke;">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          ratione? Corporis, quibusdam quo. Facilis autem alias corporis odit
+          dolorum quo repellendus, ipsum recusandae fuga voluptatem sit blanditiis
+          sint itaque nisi. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Labore, reprehenderit? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Maxime, ratione? Corporis, quibusdam quo. Facilis
+          autem alias corporis odit dolorum quo repellendus, ipsum recusandae fuga
+          voluptatem sit blanditiis sint itaque nisi. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Labore, reprehenderit?
+        </p>
+        <div class="button">
+          <v-btn small rounded color="success" dark @click="$router.push('/WhoAreWe')">KNOW MORE</v-btn>
+        </div>
+        <hr class="divider" />
       </div>
-      <hr class="divider" />
-    </div>
     
-    <h1 style="text-align:center;color: whitesmoke;">WHAT WE DO</h1>
-    <div class="container cards">
-      <v-row>
-        <v-col cols="12" sm="3" md="4" v-for="(content, index) in CardContents" :key="index">
-          <cards :img=" content.src" :title=" content.title" />
-        </v-col>
-      </v-row>
-    </div>
-
-    <div class="container">
-      <div class="button">
-        <v-btn small rounded color="success" dark>LOAD MORE</v-btn>
+      <div class="home-section">
+        <h1 style="text-align:center;color: whitesmoke;">WHAT WE DO</h1>
+        <div class="cards">
+          <v-row>
+            <v-col cols="12" sm="3" md="4" v-for="(content, index) in CardContents" :key="index">
+              <cards :img=" content.src" :title=" content.title" />
+            </v-col>
+          </v-row>
+        </div>
+    
+        <div class="button">
+          <v-btn small rounded color="success" dark @click="$router.push('/WhatWeDo')">LOAD MORE</v-btn>
+        </div>
+        <hr class="divider" />
       </div>
-      <hr class="divider" />
-    </div>
-    
-    <h1 style="text-align:center;color: whitesmoke;">LATEST BLOGS</h1>
-    <div class="container cards">
-      <v-row>
-        <v-col cols="12" sm="3" md="4" v-for="(content, index) in  BlogContents" :key="index">
-          <BlogCard
-            :title="content.title"
-            :avatar="content.avatar"
-            :author="content.author"
-            :img=" content.src"
-            :descp="content.about"
-          />
-        </v-col>
-      </v-row>
-    </div>
-    <br />
-    <div class="container">
-      <div class="button">
-        <v-btn small rounded color="success" dark>LOAD MORE</v-btn>
+      
+      <div class="home-section">
+        <h1 style="text-align:center;color: whitesmoke;">LATEST BLOGS</h1>
+        <div class="cards">
+          <v-row>
+            <v-col cols="12" sm="3" md="4" v-for="(content, index) in  BlogContents" :key="index">
+              <BlogCard
+                :title="content.title"
+                :avatar="content.avatar"
+                :author="content.author"
+                :img=" content.src"
+                :descp="content.about"
+              />
+            </v-col>
+          </v-row>
+        </div>
+        <div class="button">
+          <v-btn small rounded color="success" dark @click="$router.push('/Blog')">LOAD MORE</v-btn>
+        </div>
       </div>
     </div>
   </div>
@@ -154,25 +154,27 @@ export default {
 * {
   background-color: rgb(40, 44, 52);
 }
-.circleImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100px;
-  width: auto;
-  border-radius: 50%;
-  position: relative;
-  top: 20px;
+
+.home-section h1{
+  font-size: 3rem;
+}
+
+.home-section h1,
+.home-section p,
+.button,
+.divider,
+.cards
+{
+  margin-top: 2rem;
 }
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ text-align: center;
 }
 .cards {
   justify-content: space-between;
 }
 .divider {
-  border: 2px solid #4caf50;
+  border-bottom: 1px solid #4caf50;
 }
+
 </style>

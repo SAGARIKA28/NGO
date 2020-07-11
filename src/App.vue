@@ -3,8 +3,8 @@
     <div id="navigation-icon" v-if="mobileView">
       <v-icon id="navmenu">menu</v-icon>
     </div>
-    <Nav v-if="!mobileView"></Nav>
-    <router-view />
+    <Nav v-if="!mobileView" style="position:fixed; width:100%"></Nav>
+    <router-view style="padding-top: 100px;" />
     <Footer></Footer>
   </v-app>
 </template>
@@ -31,6 +31,7 @@ export default {
 *{
   font-family: 'Montserrat' ;
 }
+
 #navigation-icon {
   padding: 10px 10px 20px;
   margin-right: 10px;

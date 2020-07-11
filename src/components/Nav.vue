@@ -1,16 +1,23 @@
 <template>
   <div class="navItem">
     <div class="nav-container">
-      <div class="logo">
-        <img src="../assets/AV-logo-bg.png" alt="logo" width="80px">
-        <h2 style="color:white;" id="ngo-name">Akkum Vakkum</h2>
-      </div>
+      <router-link to="/" style="text-decoration:none;"> 
+        <div class="logo">
+          <img src="../assets/AV-logo-bg.png" alt="logo" width="80px">
+          <h2 style="color:white;" id="ngo-name">Akkum Vakkum</h2>
+        </div>
+      </router-link>
       <div class="leftAlign">
       <ul>
         <li v-for="routes in links" :key="routes.id">
-          <router-link class="spacing" :to="`${routes.page}`">{{
+          <router-link class="links" :to="`${routes.page}`">{{
             routes.text
           }}</router-link>
+        </li>
+        <li>
+          <router-link class="special-link" to="/"> 
+            <span style="display:flex; align-items:center;">Donate <i class="material-icons">card_giftcard</i></span>    
+          </router-link>
         </li>
       </ul>
     </div>
@@ -24,12 +31,12 @@ export default {
   data() {
     return {
       links: [
-        { id: 0, text: "Home", page: "/" },
         { id: 1, text: "Who Are We ", page: "/WhoAreWe" },
         { id: 2, text: "What We Do", page: "/WhatWeDo" },
         { id: 3, text: "Gallery", page: "/Gallery" },
         { id: 4, text: "Blog", page: "/Blog" },
         { id: 5, text: "Contact Us", page: "/Contact" },
+        { id: 6, text: "Join Us", page: "/" },
       ],
     };
   },
@@ -42,9 +49,11 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 }
 .navItem {
   display: flex;
+  z-index: 1;
   background-color: rgb(40, 44, 52);
 }
 
@@ -71,15 +80,29 @@ li {
   list-style-type: none;
 }
 
-.spacing {
+.links {
   display: block;
-  margin-right: 10px;
   color: white;
   font-weight: 500;
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
 }
-.spacing:hover {
+.links:hover {
   color: #4caf50;
+}
+
+.special-link {
+  display: block;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #4caf50;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.special-link:hover{
+  background-color: #3b883d;
 }
 </style>

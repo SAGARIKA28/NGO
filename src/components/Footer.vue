@@ -11,7 +11,7 @@
         </v-btn>
       </v-card-title>
 
-      <v-card-text class="py-2 white--text text-center">
+      <v-card-text style="background:rgb(40, 44, 52);" class="py-2 white--text text-center">
         <strong>Copyright ©</strong>
         {{ new Date().getFullYear() }} —
         <strong>SagarikaSundi.All Rights Reserved</strong>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card">
     <v-card max-width="344" class="mx-auto">
       <v-list-item>
         <v-list-item-avatar color="grey">
@@ -37,4 +37,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+  .card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+  }
+
+</style>
