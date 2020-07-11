@@ -9,11 +9,7 @@
         transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>
-    <!--   <div style=" background-color:black;display:block;">-->
-    <img class="circleImg" :src="require('@/assets/saga2.jpg')" />
-    <!-- </div>-->
-    <br />
-    <br />
+
     <div class="container">
       <h1 style="text-align:center;color: whitesmoke;">WHO ARE WE</h1>
       <br />
@@ -31,15 +27,10 @@
       <div class="button">
         <v-btn small rounded color="success" dark>KNOW MORE</v-btn>
       </div>
-      <br />
       <hr class="divider" />
     </div>
-    <br />
-    <img class="circleImg" :src="require('@/assets/saga2.jpg')" />
-    <br />
-    <br />
+    
     <h1 style="text-align:center;color: whitesmoke;">WHAT WE DO</h1>
-    <br />
     <div class="container cards">
       <v-row>
         <v-col cols="12" sm="3" md="4" v-for="(content, index) in CardContents" :key="index">
@@ -48,19 +39,14 @@
       </v-row>
     </div>
 
-    <br />
     <div class="container">
       <div class="button">
         <v-btn small rounded color="success" dark>LOAD MORE</v-btn>
       </div>
-      <br />
       <hr class="divider" />
     </div>
-    <img class="circleImg" :src="require('@/assets/saga2.jpg')" />
-    <br />
-    <br />
+    
     <h1 style="text-align:center;color: whitesmoke;">LATEST BLOGS</h1>
-    <br />
     <div class="container cards">
       <v-row>
         <v-col cols="12" sm="3" md="4" v-for="(content, index) in  BlogContents" :key="index">
@@ -79,14 +65,13 @@
       <div class="button">
         <v-btn small rounded color="success" dark>LOAD MORE</v-btn>
       </div>
-      <br />
     </div>
   </div>
 </template>
 
 <script>
-import BlogCard from "./Cards.vue";
-import Cards from "./DoCard.vue";
+import BlogCard from "../components/Cards";
+import Cards from "../components/DoCard";
 export default {
   name: "Home",
   components: {

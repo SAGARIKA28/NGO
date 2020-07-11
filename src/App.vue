@@ -1,6 +1,5 @@
 <template>
   <v-app>
-    <div>LOGO OF THE NGO</div>
     <div id="navigation-icon" v-if="mobileView">
       <v-icon id="navmenu">menu</v-icon>
     </div>
@@ -28,7 +27,10 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
+*{
+  font-family: 'Montserrat' ;
+}
 #navigation-icon {
   padding: 10px 10px 20px;
   margin-right: 10px;

@@ -1,11 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Blog from "../components/Blog.vue";
-import Contact from "../components/Contact.vue";
-import Gallery from "../components/Gallery.vue";
-import Home from "../components/Home.vue";
-import WhatWeDo from "../components/WhatWeDo.vue";
-import WhoAreWe from "../components/WhoAreWe.vue";
+import Blog from "../views/Blog.vue";
+import Contact from "../views/Contact.vue";
+import Gallery from "../views/Gallery.vue";
+import Home from "../views/Home.vue";
+import WhatWeDo from "../views/WhatWeDo.vue";
+import WhoAreWe from "../views/WhoAreWe.vue";
 
 Vue.use(VueRouter);
 
