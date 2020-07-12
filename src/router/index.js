@@ -6,6 +6,7 @@ import Gallery from "../views/Gallery.vue";
 import Home from "../views/Home.vue";
 import WhatWeDo from "../views/WhatWeDo.vue";
 import WhoAreWe from "../views/WhoAreWe.vue";
+import BlogPage from "../components/BlogComponents/BlogDisplay";
 
 Vue.use(VueRouter);
 
@@ -40,6 +41,11 @@ const routes = [
     name: "WhoAreWe",
     component: WhoAreWe,
   },
+  {
+    path: "/Blog/:id",
+    name: "BlogPage",
+    component: BlogPage,
+  }
 
   //{
   // path: "/about",

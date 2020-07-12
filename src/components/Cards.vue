@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="$router.push(`/Blog/${title}`)">
     <v-card max-width="344" class="mx-auto">
       <v-list-item>
         <v-list-item-avatar color="grey">

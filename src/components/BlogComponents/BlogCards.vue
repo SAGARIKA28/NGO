@@ -3,20 +3,21 @@
     <h1 style="text-align:center;color: whitesmoke; font-size:3rem">BLOGS</h1>
     <hr class="divider" />
     <div class="search-box">
-      <input style="color:white" id="search-input" type="text" placeholder="Search for relevant blogs...">
+      <input style="color:white; width:90%" id="search-input" type="text" placeholder="Search for relevant blogs...">
       <button id="search-btn"><i class="material-icons">search</i></button>
     </div>
     
     <v-row dense>
       <v-col v-for="(item, i) in items" :key="i" cols="12">
-        <v-card class="card" color="grey lighten-4" shaped>
+        <v-card class="card" color="grey lighten-4" shaped @click="$router.push(`/Blog/${item.title}`)">
           <div class="d-flex flex-no-wrap justify-space-between">
             <div>
               <v-card-title class="headline" v-text="item.title"></v-card-title>
 
               <v-card-subtitle v-text="item.artist"></v-card-subtitle>
               <v-card-text style="font-size:1rem">  
-                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."</v-card-text>
+                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."
+                </v-card-text>
               <v-card-actions>
                 <v-btn text>Read Now</v-btn>
               </v-card-actions>
@@ -91,5 +92,8 @@ export default {
   justify-content: space-between;
   border-bottom: 1px solid whitesmoke;
   margin: auto;
+}
+input:focus{
+  outline: none;
 }
 </style>

@@ -86,9 +86,8 @@
     #contact{
         background: white;
         width: 100vw;
-        height: 50vh;
+        min-height: 400px;
         display: flex;
-
     }
     .left-side{
       width: 50%;
@@ -130,5 +129,15 @@
       -webkit-box-shadow: 0 10px 10px -6px #777;
       -moz-box-shadow: 0 10px 10px -6px #777;
       box-shadow: 0 10px 10px -6px #777;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 500px) {
+      #contact{
+        display: block;
+      }
+      .left-side,.right-side{
+        width: 100%;
+      }
     }
 </style>

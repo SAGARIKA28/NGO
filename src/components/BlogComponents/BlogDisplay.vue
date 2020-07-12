@@ -8,21 +8,22 @@
       ></v-img>
     </div>
     <div class="container">
-      <h1 class="text" style="margin-top:10px;">
+      <h1 class="text" style="margin-top:10px; font-weight:500; font-size:2rem;">
         <b>The Story Of A Lost Girl</b>
       </h1>
       <v-list-item>
-        <v-list-item-avatar color="grey">
+        <v-list-item-avatar>
           <img :src="require('@/assets/saga2.jpg')" />
         </v-list-item-avatar>
         <v-list-item-content>
-          <v-list-item-title class="headline text">Sagarika Sundi</v-list-item-title>
-          <v-list-item-subtitle class="text">Author | Jun 2, 2018 | Blog</v-list-item-subtitle>
+          <v-list-item-title class="text" >Sagarika Sundi</v-list-item-title>
+          <v-list-item-subtitle class="text" style="color:whitesmoke">Author | Jun 2, 2018 | Blog</v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
-      <hr id="divider" />
+      
+      <hr id="divider"/>
 
-      <p class="text" style="margin-top:10px;">
+      <p class="text" style="margin-top:10px;"> 
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
@@ -30,35 +31,15 @@
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
       </p>
-      <p class="text" style="margin-top:10px;">
-        The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
-        The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
+      <p class="text" style="margin-top:10px;"> 
+        In the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
         The growth of the non-profit sector in India, in the last two decades, has been phenomenal. Grassroots NGOs particularly, by engaging directly with the people, are able to participate in the thought-making process of the communities they work with, and thus have the capacity to bring about long-lasting positive change.
       </p>
       <hr id="divider" />
-      <div>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-textarea solo name="input-7-4" label="Solo textarea"></v-textarea>
-          </v-col>
-          <div class="form">
-            <v-col cols="12" md="6">
-              <form>
-                <span>
-                  <label>Name:</label>
-                </span>
-                <input class="text inputbox" type="text" id="fname" name="fname" />
-                <br />
-                <br />
-                <v-btn>Comment</v-btn>
-              </form>
-            </v-col>
-          </div>
-        </v-row>
-      </div>
+      
     </div>
   </div>
 </template>
@@ -71,11 +52,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+*{
+  background: rgb(40,42,54);
+}
 #divider {
   border: 1px solid #4caf50;
+  margin: 20px 0 20px 0;
 }
 .text {
   color: white;
+  text-align: justify;
 }
 .bottom-gradient {
   background-image: linear-gradient(

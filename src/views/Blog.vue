@@ -9,7 +9,6 @@
 </template>
 
 <script>
-//import DisplayBlog from "./BlogComponents/BlogDisplay.vue";
 import BlogSlider from "../components/BlogComponents/BlogSlider.vue";
 import BlogCards from "../components/BlogComponents/BlogCards.vue";
 
