@@ -66,17 +66,20 @@
         </div>
       </div>
     </div>
+    <ContactUs />
   </div>
 </template>
 
 <script>
 import BlogCard from "../components/Cards";
 import Cards from "../components/DoCard";
+import ContactUs from "../components/Contact";
 export default {
   name: "Home",
   components: {
     BlogCard: BlogCard,
-    Cards: Cards
+    Cards: Cards,
+    ContactUs
   },
   data() {
     return {
@@ -145,7 +148,13 @@ export default {
         }
       ]
     };
-  }
+  },
+  mounted() {
+      let section = this.$router.currentRoute.hash.replace("#", "");
+          if (section)
+            this.$nextTick(()=> window.document.getElementById(section).scrollIntoView());
+            this.$router.push('/');
+    }
 };
 </script>
 
@@ -157,6 +166,7 @@ export default {
 
 .home-section h1{
   font-size: 3rem;
+  color: whitesmoke;
 }
 
 .home-section h1,

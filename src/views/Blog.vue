@@ -3,7 +3,6 @@
     <blogSlider></blogSlider>
     <br />
     <br />
-
     <BlogCards></BlogCards>
     <!--<DisplayBlog />-->
   </div>

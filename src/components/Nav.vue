@@ -4,7 +4,7 @@
       <router-link to="/" style="text-decoration:none;"> 
         <div class="logo">
           <img src="../assets/AV-logo-bg.png" alt="logo" width="80px">
-          <h2 style="color:white;" id="ngo-name">Akkum Vakkum</h2>
+          <h2 style="color:white; font-weight:500;" id="ngo-name">Aadivimb</h2>
         </div>
       </router-link>
       <div class="leftAlign">
@@ -13,6 +13,9 @@
           <router-link class="links" :to="`${routes.page}`">{{
             routes.text
           }}</router-link>
+        </li>
+        <li>
+          <a href="/#contact" class="links">Contact Us</a>
         </li>
         <li>
           <router-link class="special-link" to="/"> 
@@ -35,8 +38,7 @@ export default {
         { id: 2, text: "What We Do", page: "/WhatWeDo" },
         { id: 3, text: "Gallery", page: "/Gallery" },
         { id: 4, text: "Blog", page: "/Blog" },
-        { id: 5, text: "Contact Us", page: "/Contact" },
-        { id: 6, text: "Join Us", page: "/" },
+        { id: 5, text: "Join Us", page: "/" },
       ],
     };
   },
@@ -55,6 +57,7 @@ export default {
   display: flex;
   z-index: 1;
   background-color: rgb(40, 44, 52);
+  box-shadow: 0 0px 25px #000;
 }
 
 .nav-container{
